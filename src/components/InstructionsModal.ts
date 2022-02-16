@@ -3,7 +3,9 @@ import m from 'mithril';
 import md from '../markdown/instructions.md';
 
 // Enable modal links.
-const md_edited = md.replace(/<a href="#modal-gallery"/g, '<a href="#modal-gallery" uk-toggle');
+let md_edited = md.replace(/<a href="#modal-gallery"/g, '<a href="#modal-gallery" uk-toggle');
+// Edit image paths.
+md_edited = md_edited.replace(/https:\/\/raw.githubusercontent.com\/amandaghassaei\/botanigram\/main\//g, '');
 
 const instructionsHTML = m.trust(md_edited);
 
