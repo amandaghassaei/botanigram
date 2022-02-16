@@ -1,4 +1,4 @@
-## BOTANIGRAM
+# BOTANIGRAM
 
 Live Demo at: [apps.amandaghassaei.com/botanigram/](https://apps.amandaghassaei.com/botanigram/)
 
@@ -13,13 +13,13 @@ A single image of a plant contains information about the past and the future of 
 
 <img class="lazy" src="docs/orchid_branch.jpg" alt="orchid branch showing flowers in many stages of development" style="max-width: 600px;"/>
 
-Similarly, an image of a succulent shows many stages of leaf development.  The large leaves around the outside of the plant were formed first and the smallest leaves in the center formed most recently:
+Similarly, the image below shows many stages of leaf development.  The large leaves around the outside of the plant were formed first and the smallest leaves in the center formed most recently:
 
 <img class="lazy" src="docs/golden.jpg" alt="succulent with leaf growing order and the golden angle indicated" style="max-width: 500px;"/>
 
-Sequential leaves are spaced by the golden angle (137.5 degrees); by rotating the image by this angle, we can see the leaves from smallest to largest - giving the illusion that the leaf is slowly morphing from a small leaf bud into a fully mature leaf.  This works similarly to a [zoetrope](https://en.wikipedia.org/wiki/Zoetrope), an early animation device that pre-dates film.  Zoetropes work by displaying a sequence of gradually changing images, giving the illusion of motion (or, in this case, growing).
+Sequential leaves on this plant are spaced by the golden angle (137.5 degrees) – this is common to many species of plants you encounter on a daily basis.  By rotating the image in increments of 137.5 degrees, we can place sequential leaves in approximately the same spot in space - giving the illusion that the leaf is slowly morphing from a small leaf bud into a fully mature leaf.  This works in the same way as an early animation device called a [zoetrope](https://en.wikipedia.org/wiki/Zoetrope).  Zoetropes work by displaying a sequence of gradually changing images, giving the illusion of motion (or, in this case, growing).
 
-If you're interested in learning more about the relationship between the Fibonacci series and the spiral growth patterns on plants, I recommend checking out the three part YouTube series: ["Doodling in Math: Spirals, Fibonacci, and Being a Plant"](https://www.youtube.com/watch?v=ahXIMUkSXX0) by Vi Hart.
+The golden angle is related to some other mathematical concepts: the Fibonacci series and the golden ratio.  If you're interested in learning more about the relationship between math and the growth patterns of plants, I recommend checking out the incredible three part YouTube series: ["Doodling in Math: Spirals, Fibonacci, and Being a Plant"](https://www.youtube.com/watch?v=ahXIMUkSXX0) by Vi Hart.
 
 
 ### Source Code
@@ -64,11 +64,15 @@ Short answer: Use the golden angle (137.5 degrees), this will work in the majori
 
 <img class="lazy" src="docs/golden.jpg" alt="plant leaves with golden angle highlighted" style="max-width: 500px;"/>
 
-Long answer: The rotation angle required to create a great animation depends on your image and the growth dynamics of your subject.  Most plants grow with golden angle spacing between sequential leaves, so try 137.5 degrees first.  The image above shows leaf order labeled and the golden angle indicated between leaves 4/5, 5/6, and 6/7.
+Long answer: The rotation angle required to create a great animation depends on your image and the growth dynamics of your subject.  Many plants grow with golden angle spacing between sequential leaves, so try 137.5 degrees first.  The image above shows leaf order labeled and the golden angle indicated between leaves 4/5, 5/6, and 6/7.
+
+Many plants grow with pairs of leaves spaced 180 degrees from each other.  These are worth a try, but in general they won't create as strong of a growing illusion.
 
 Leaf spacing can vary from species to species or arise from unique environmental factors during a plant's development – occasionally, two plants of the same species may even display different leaf spacings.  If the golden angle doesn't work, you might also try the Lucas angle (99.5 degrees).  Lucas angle plants are relatively uncommon, but if you photograph enough plants you will see one eventually:
 
 <img class="lazy" src="docs/lucas.jpg" alt="plant leaves with lucas angle highlighted" style="max-width: 500px;"/>
+
+A great explanation of the golden angle, Lucas angle, and how this all relates to plant growth can be found in the video ["Doodling in Math: Spirals, Fibonacci, and Being a Plant"](https://www.youtube.com/watch?v=ahXIMUkSXX0).
 
 You can also experiment with different angles see how it affects the animation; there may be more than one "right" answer.  This succulent has 137.5 degree leaf spacing, but the animation progresses very slowly using the golden angle:
 
