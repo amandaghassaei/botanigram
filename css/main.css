@@ -347,7 +347,7 @@ input[type=number] {
 	height: 100%;
 }
 
-#modal-instructions img {
+#modal-instructions img, #modal-about img {
 	width: 100%;
 	max-width: 600px;
 	margin: auto;

@@ -33,11 +33,15 @@ Short answer: Use the golden angle (137.5 degrees), this will work in the majori
 
 <img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/golden.jpg" alt="plant leaves with golden angle highlighted" style="max-width: 500px;"/>
 
-Long answer: The rotation angle required to create a great animation depends on your image and the growth dynamics of your subject.  Most plants grow with golden angle spacing between sequential leaves, so try 137.5 degrees first.  The image above shows leaf order labeled and the golden angle indicated between leaves 4/5, 5/6, and 6/7.
+Long answer: The rotation angle required to create a great animation depends on your image and the growth dynamics of your subject.  Many plants grow with golden angle spacing between sequential leaves, so try 137.5 degrees first.  The image above shows leaf order labeled and the golden angle indicated between leaves 4/5, 5/6, and 6/7.
+
+Many plants grow with pairs of leaves spaced 180 degrees from each other.  These are worth a try, but in general they won't create as strong of a growing illusion.
 
 Leaf spacing can vary from species to species or arise from unique environmental factors during a plant's development – occasionally, two plants of the same species may even display different leaf spacings.  If the golden angle doesn't work, you might also try the Lucas angle (99.5 degrees).  Lucas angle plants are relatively uncommon, but if you photograph enough plants you will see one eventually:
 
 <img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/lucas.jpg" alt="plant leaves with lucas angle highlighted" style="max-width: 500px;"/>
+
+A great explanation of the golden angle, Lucas angle, and how this all relates to plant growth can be found in the video ["Doodling in Math: Spirals, Fibonacci, and Being a Plant"](https://www.youtube.com/watch?v=ahXIMUkSXX0).
 
 You can also experiment with different angles see how it affects the animation; there may be more than one "right" answer.  This succulent has 137.5 degree leaf spacing, but the animation progresses very slowly using the golden angle:
 

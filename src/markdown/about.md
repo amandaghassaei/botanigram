@@ -9,13 +9,13 @@ A single image of a plant contains information about the past and the future of 
 
 <img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/orchid_branch.jpg" alt="orchid branch showing flowers in many stages of development" style="max-width: 600px;"/>
 
-Similarly, an image of a succulent shows many stages of leaf development.  The large leaves around the outside of the plant were formed first and the smallest leaves in the center formed most recently:
+Similarly, the image below shows many stages of leaf development.  The large leaves around the outside of the plant were formed first and the smallest leaves in the center formed most recently:
 
 <img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/golden.jpg" alt="succulent with leaf growing order and the golden angle indicated" style="max-width: 500px;"/>
 
-Sequential leaves are spaced by the golden angle (137.5 degrees); by rotating the image by this angle, we can see the leaves from smallest to largest - giving the illusion that the leaf is slowly morphing from a small leaf bud into a fully mature leaf.  This works similarly to a [zoetrope](https://en.wikipedia.org/wiki/Zoetrope), an early animation device that pre-dates film.  Zoetropes work by displaying a sequence of gradually changing images, giving the illusion of motion (or, in this case, growing).
+Sequential leaves on this plant are spaced by the golden angle (137.5 degrees) – this is common to many species of plants you encounter on a daily basis.  By rotating the image in increments of 137.5 degrees, we can place sequential leaves in approximately the same spot in space - giving the illusion that the leaf is slowly morphing from a small leaf bud into a fully mature leaf.  This works in the same way as an early animation device called a [zoetrope](https://en.wikipedia.org/wiki/Zoetrope).  Zoetropes work by displaying a sequence of gradually changing images, giving the illusion of motion (or, in this case, growing).
 
-If you're interested in learning more about the relationship between the Fibonacci series and the spiral growth patterns on plants, I recommend checking out the three part YouTube series: ["Doodling in Math: Spirals, Fibonacci, and Being a Plant"](https://www.youtube.com/watch?v=ahXIMUkSXX0) by Vi Hart.
+The golden angle is related to some other mathematical concepts: the Fibonacci series and the golden ratio.  If you're interested in learning more about the relationship between math and the growth patterns of plants, I recommend checking out the incredible three part YouTube series: ["Doodling in Math: Spirals, Fibonacci, and Being a Plant"](https://www.youtube.com/watch?v=ahXIMUkSXX0) by Vi Hart.
 
 
 ### Source Code
