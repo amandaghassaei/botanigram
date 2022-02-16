@@ -16,6 +16,8 @@ const recordVideo = false;
 const videoLength = 20 * 30; // 20 seconds times 30fps.
 let t = 0;
 
+const CanvasCapture = window.CanvasCapture;
+
 // Init a symmetic easing function that has area under the curve = 1.
 function getEasing(length) {
 	if (length % 2 !== 1) {
