@@ -9,6 +9,10 @@ body {
     margin: 0;
 }
 
+body>div {
+	width: 100%;
+}
+
 #app-wrapper {
 	display: flex;
 	flex-direction: column;

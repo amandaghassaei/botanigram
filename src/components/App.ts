@@ -8,7 +8,7 @@ import { Gallery } from './Gallery';
 import { Navbar } from './Navbar';
 import { WelcomeModal } from './WelcomeModal';
 
-const root = document.body;
+const root = document.getElementById('root')!;
 
 const primaryViewer = AnimationViewer(primaryThreeView);
 
