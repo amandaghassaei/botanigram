@@ -190,7 +190,7 @@ export function ExportModal() {
 										disabled: isExporting,
 										value: minMP4Length,
 										oninput: changeMinMP4Length,
-										'uk-tooltip': 'title: Looped videos are typically only 2 seconds long, use this number to increase the duration of the exported video.  Use 0 to export shortest possible video.;delay: 100',
+										'uk-tooltip': 'title: Looped videos are typically only 3 seconds long, use this number to increase the duration of the video.  Use 0 to export shortest possible video.;delay: 100',
 									}),
 								),
 							),

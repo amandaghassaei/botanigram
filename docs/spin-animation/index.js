@@ -47,17 +47,19 @@ function setup() {
 	img = loadImage(renderFullSize ? "Square_Crop.jpg" : "Square_Crop-900.jpg");
 	const canvas = document.getElementById('defaultCanvas0');
 
-	CanvasCapture.init(
-		canvas,
-		{
-			showRecDot: true,
-			ffmpegCorePath: '../../dependencies/ffmpeg-core.js'
-		},
-	);
+	if (CanvasCapture) {
+		CanvasCapture.init(
+			canvas,
+			{
+				showRecDot: true,
+				ffmpegCorePath: '../../dependencies/ffmpeg-core.js'
+			},
+		);
+	}
 }
 
 function draw() {
-	if (t == 0 && recordVideo) {
+	if (t == 0 && recordVideo && CanvasCapture) {
 		CanvasCapture.beginVideoRecord({
 			format: 'webm',
 			name: 'Animation',
@@ -73,7 +75,7 @@ function draw() {
 	image(img, imageOffset - center, imageOffset - center);
 	pop();
 
-	if (CanvasCapture.isRecording()) CanvasCapture.recordFrame();
+	if (CanvasCapture && CanvasCapture.isRecording()) CanvasCapture.recordFrame();
 
 	if (easingIndex === 0 && easingNumSteps === targetEasingSteps) {
 		// Pinch easing until we get step function (e.g. array of all 0's and one 1).
@@ -101,6 +103,6 @@ function draw() {
 
 	t++;
 	if (t > videoLength && recordVideo) {
-		if (CanvasCapture.isRecording()) CanvasCapture.stopRecord();
+		if (CanvasCapture && CanvasCapture.isRecording()) CanvasCapture.stopRecord();
 	}
 }
