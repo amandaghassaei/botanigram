@@ -10,8 +10,8 @@ export const WelcomeModal = {
 				m('button', { class: 'uk-modal-close-full uk-close-large', type: 'button', 'uk-close': true, }),
 				m('div', { class: 'welcome-wrapper'}, [
 					m('div', { id: 'welcome-video'},
-						m('div', { class: 'welcome-video-wrapper' },
-							m('video', { class: 'video-js', aspectRatio: '1:1', fluid: true, autoplay: true, controls: true, preload: 'auto', width: '800', height: '800', loop: true, poster: 'docs/intro_video_cover.jpg', 'data-setup': '{}' },
+						m('div', { class: 'welcome-video-wrapper intro-video-wrapper' },
+							m('video', { id: 'intro-video-1', class: 'video-js', aspectRatio: '1:1', fluid: true, autoplay: true, controls: true, preload: 'auto', width: '600', height: '600', loop: true, poster: 'docs/intro_video_cover.jpg', 'data-setup': '{}' },
 								m('source', { src: 'docs/intro-small.mp4', type: 'video/mp4' }),
 								m('p', { class: 'vjs-no-js' }, 'To view this video please enable JavaScript, and consider upgrading to a web browser that ',
 									m('a', { href: 'https://videojs.com/html5-video-support/', target: '_blank' }, 'supports HTML5 video'),

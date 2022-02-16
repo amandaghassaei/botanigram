@@ -358,6 +358,11 @@ input[type=number] {
     display: block;
 }
 
+#modal-instructions .intro-video-wrapper {
+	width: 400px;
+    margin: auto;
+}
+
 .noselect {
 	-webkit-touch-callout: none!important; /* iOS Safari */
 	  -webkit-user-select: none!important; /* Safari */
@@ -425,7 +430,8 @@ input[type=number] {
 	margin: auto;
 }
 
-.welcome-video-wrapper>div {
+
+.intro-video-wrapper>div {
 	position: relative;
 	width: 100%;
     padding-top: 100%;
@@ -449,4 +455,11 @@ input[type=number] {
 		max-width: 600px;
 		max-height: 600px;
 	}
+}
+
+.vjs-big-play-button {
+	top: 50%!important;
+    left: 50%!important;
+    margin-left: -45px;
+    margin-top: -25px;
 }
