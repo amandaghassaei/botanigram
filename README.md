@@ -11,11 +11,11 @@ This project was inspired by the ["Blooms" series of work by John Edmark](http:/
 
 A single image of a plant contains information about the past and the future of the organism.  You can look at a single branch of flowers and see every stage of the development process: from tiny buds to fully opened blooms:
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/orchid_branch.jpg" alt="orchid branch showing flowers in many stages of development" style="max-width: 600px;"/>
+<img class="lazy" src="docs/orchid_branch.jpg" alt="orchid branch showing flowers in many stages of development" style="max-width: 600px;"/>
 
 Similarly, an image of a succulent shows many stages of leaf development.  The large leaves around the outside of the plant were formed first and the smallest leaves in the center formed most recently:
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/golden.jpg" alt="succulent with leaf growing order and the golden angle indicated" style="max-width: 500px;"/>
+<img class="lazy" src="docs/golden.jpg" alt="succulent with leaf growing order and the golden angle indicated" style="max-width: 500px;"/>
 
 Sequential leaves are spaced by the golden angle (137.5 degrees); by rotating the image by this angle, we can see the leaves from smallest to largest - giving the illusion that the leaf is slowly morphing from a small leaf bud into a fully mature leaf.  This works similarly to a [zoetrope](https://en.wikipedia.org/wiki/Zoetrope), an early animation device that pre-dates film.  Zoetropes work by displaying a sequence of gradually changing images, giving the illusion of motion (or, in this case, growing).
 
@@ -44,16 +44,16 @@ No special photography equipment required.  Center the camera over your subject 
 
 ### Import Your Photo
 
-<img class="lazy uk-box-shadow-large" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/import_photo.gif" alt="screen recording shows how to import photo into app" style="max-width: 600px;"/>
+<img class="lazy uk-box-shadow-large" src="docs/import_photo.gif" alt="screen recording shows how to import photo into app" style="max-width: 600px;"/>
 
 Import your photo by dragging it directly into the app or copying and pasting it into the app.  You can also select a file from your device using the "select file" link under the control panel.  While using this app, your photos never leave your computer (they are not uploaded to a server).
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/upload_photo.jpg" alt="image upload UI" style="max-width: 400px;"/>
+<img class="lazy" src="docs/upload_photo.jpg" alt="image upload UI" style="max-width: 400px;"/>
 
 
 ### Select Center of Rotation
 
-<img class="lazy uk-box-shadow-large" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/select_center.gif" alt="screen recording shows how to select center of rotation of image" style="max-width: 600px;"/>
+<img class="lazy uk-box-shadow-large" src="docs/select_center.gif" alt="screen recording shows how to select center of rotation of image" style="max-width: 600px;"/>
 
 While the animation is paused, select the center of rotation by clicking directly on the image viewer.  Pinch/scroll to enlarge the image and drag the image slowly or use the left/right and up/down arrows on your keyboard to make fine adjustments to the center of rotation.
 
@@ -62,37 +62,37 @@ While the animation is paused, select the center of rotation by clicking directl
 
 Short answer: Use the golden angle (137.5 degrees), this will work in the majority of cases.
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/golden.jpg" alt="plant leaves with golden angle highlighted" style="max-width: 500px;"/>
+<img class="lazy" src="docs/golden.jpg" alt="plant leaves with golden angle highlighted" style="max-width: 500px;"/>
 
 Long answer: The rotation angle required to create a great animation depends on your image and the growth dynamics of your subject.  Most plants grow with golden angle spacing between sequential leaves, so try 137.5 degrees first.  The image above shows leaf order labeled and the golden angle indicated between leaves 4/5, 5/6, and 6/7.
 
 Leaf spacing can vary from species to species or arise from unique environmental factors during a plant's development – occasionally, two plants of the same species may even display different leaf spacings.  If the golden angle doesn't work, you might also try the Lucas angle (99.5 degrees).  Lucas angle plants are relatively uncommon, but if you photograph enough plants you will see one eventually:
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/lucas.jpg" alt="plant leaves with lucas angle highlighted" style="max-width: 500px;"/>
+<img class="lazy" src="docs/lucas.jpg" alt="plant leaves with lucas angle highlighted" style="max-width: 500px;"/>
 
 You can also experiment with different angles see how it affects the animation; there may be more than one "right" answer.  This succulent has 137.5 degree leaf spacing, but the animation progresses very slowly using the golden angle:
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/137.5_deg_slow.gif" alt="137.5 degree animation of succulent is too slow" style="max-width: 300px;"/>
+<img class="lazy" src="docs/137.5_deg_slow.gif" alt="137.5 degree animation of succulent is too slow" style="max-width: 300px;"/>
 
 If you can identify distinct spirals on your plant, you might try dividing 360 by the number of spiral arms, or use some integer multiple of this angle.  I counted 13 spirals arms, so I used 360 / 13 = 27.6 degrees as a starting point:
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/spirals.jpg" alt="13 spiral arms in pattern of leaves on succulent" style="max-width: 400px;"/>
+<img class="lazy" src="docs/spirals.jpg" alt="13 spiral arms in pattern of leaves on succulent" style="max-width: 400px;"/>
 
 From there, I found that if I multiplied 27.6 by 2 (55.3 degrees) and adjusted the angle slightly to 52.9 degrees, the animation stabilized to something that evolves more quickly:
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/52.9_deg.gif" alt="52.9 degree animation of succulent" style="max-width: 300px;"/>
+<img class="lazy" src="docs/52.9_deg.gif" alt="52.9 degree animation of succulent" style="max-width: 300px;"/>
 
 Other multiples of 27.6 degrees might be worth looking at as well.  In fact, the golden angle of 137.5 degrees is approximately 27.6 * 5 = 138 degrees (this is not a coincidence, it comes straight from the Fibonacci series).  If you select the "Rotation Angle" control, you can press the up and down arrow keys to quickly scan through angles and experiment:
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/rotation_angle.jpg" alt="rotation angle UI" style="max-width: 350px;"/>
+<img class="lazy" src="docs/rotation_angle.jpg" alt="rotation angle UI" style="max-width: 350px;"/>
 
 Another example is this star-shaped cactus, which more-or-less "works" at 137.5 degrees:
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/137.5_deg.gif" alt="137.5 degree animation of cactus" style="max-width: 300px;"/>
+<img class="lazy" src="docs/137.5_deg.gif" alt="137.5 degree animation of cactus" style="max-width: 300px;"/>
 
 Since this cactus has five arms coming out of it, the angle between adjacent arms is 360 / 5 = 72 degrees.  I noticed that sequential spots on the cactus are spaced 2 arms apart, so I set the angle to 72 * 2 = 144 degrees to fix the orientation of the plant in the animation:
 
-<img class="lazy" data-src="https://raw.githubusercontent.com/amandaghassaei/botanigram/main/docs/144_deg.gif" alt="144 degree animation of cactus" style="max-width: 300px;"/>
+<img class="lazy" src="docs/144_deg.gif" alt="144 degree animation of cactus" style="max-width: 300px;"/>
 
 
 ### I Made Something, Now What?
