@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="utf-8">
+		<title>BOTANIGRAM</title>
+
+		<!-- Load up css first to help with layout issues -->
+		<link rel="stylesheet" href="dependencies/uikit.min.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body class="js-upload">
+		<!-- Set the correct server headers for gh-pages to support SharedArrayBuffer -->
+		<!-- https://github.com/gzuidhof/coi-serviceworker -->
+		<script src="dependencies/coi-serviceworker.min.js"></script>
+		<script src="dist/index.js"></script>
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-GRQ9997D7M"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'G-GRQ9997D7M');
+		</script>
+	</body>
+</html>

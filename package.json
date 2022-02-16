@@ -1,0 +1,56 @@
+{
+  "name": "botanigram",
+  "version": "1.0.0",
+  "description": "A simple web app for making a golden angle animation from a still image.",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "webpack serve --env development",
+    "build": "webpack --env production && node make_readme.js",
+    "deploy": "npm run build && ./deploy.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amandaghassaei/botanigram.git"
+  },
+  "author": "Amanda Ghassaei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amandaghassaei/botanigram/issues"
+  },
+  "homepage": "https://github.com/amandaghassaei/botanigram#readme",
+  "dependencies": {
+    "auto-bind": "^5.0.1",
+    "canvas-capture": "^1.1.11",
+    "classnames": "^2.3.1",
+    "country-region-data": "^2.0.0",
+    "file-saver": "^2.0.5",
+    "image-conversion": "^2.1.1",
+    "jszip": "^3.7.1",
+    "mithril": "^2.0.4",
+    "mithril-infinite": "^1.3.0",
+    "scrollto-with-animation": "^3.0.4",
+    "three": "^0.135.0",
+    "uikit": "^3.9.4",
+    "uuid": "^8.3.2",
+    "vanilla-lazyload": "^17.5.0"
+  },
+  "devDependencies": {
+    "@types/file-saver": "^2.0.5",
+    "@types/mithril": "^2.0.8",
+    "@types/three": "^0.135.0",
+    "@types/uikit": "^3.3.2",
+    "@types/uuid": "^8.3.4",
+    "csv-loader": "^3.0.3",
+    "dotenv-webpack": "^7.0.3",
+    "file-loader": "^6.2.0",
+    "html-loader": "^3.1.0",
+    "markdown-loader": "^6.0.0",
+    "terser-webpack-plugin": "^5.3.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.1"
+  }
+}

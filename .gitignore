@@ -1,0 +1,7 @@
+node_modules/
+src/data/
+*.DS_Store
+.env.*
+dist/
+deploy.sh
+*.hot-update.*
