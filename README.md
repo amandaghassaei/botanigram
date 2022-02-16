@@ -1,10 +1,12 @@
 # BOTANIGRAM
 
+<img class="lazy" src="docs/succulent_animation.gif" alt="succulent animation" style="max-width: 600px;"/>
+
 Live Demo at: [apps.amandaghassaei.com/botanigram/](https://apps.amandaghassaei.com/botanigram/)
 
 Created by [Amanda Ghassaei](https://amandaghassaei.com/).
 
-This project was inspired by the ["Blooms" series of work by John Edmark](http://www.johnedmark.com/phifib/2016/4/28/blooms-strobe-animated-phi-based-sculptures).  I came across an interview where Edmark describes how you can [spin real plants to produce similar animated effects](http://www.johnedmark.com/natural-blooms-1/2016/4/29/strobe-animated-artichoke-an-example-of-a-naturally-occurring-bloom) and found myself wishing I could test it out on every plant I saw around me.
+This project was inspired by the ["Blooms" series of work by John Edmark](http://www.johnedmark.com/phifib/2016/4/28/blooms-strobe-animated-phi-based-sculptures).  I came across an interview where Edmark describes how you can [spin real plants to produce similar animated effects](http://www.johnedmark.com/natural-blooms-1/2016/4/29/strobe-animated-artichoke-an-example-of-a-naturally-occurring-bloom) and found myself wishing I could test it on the plants I saw around me.
 
 
 ### How Does This Work?
@@ -17,7 +19,7 @@ Similarly, the image below shows many stages of leaf development.  The large lea
 
 <img class="lazy" src="docs/golden.jpg" alt="succulent with leaf growing order and the golden angle indicated" style="max-width: 500px;"/>
 
-Sequential leaves on this plant are spaced by the golden angle (137.5&deg;) – this angle is common to many species of plants you encounter on a daily basis.  By rotating the image in increments of 137.5&deg;, we can place sequential leaves in approximately the same spot on the screen - giving the illusion that the leaf is slowly morphing from a small leaf bud into a fully mature leaf.  This animation technique is based on a nineteenth century device called a [zoetrope](https://en.wikipedia.org/wiki/Zoetrope), which displays a sequence of gradually changing images, giving the illusion of motion (or, in this case, growing).
+Sequential leaves on this plant are spaced by the golden angle (137.5&deg;) – this angle is common to many species of plants you encounter everyday.  By rotating the image in increments of 137.5&deg;, we can place sequential leaves in approximately the same spot on the screen - giving the illusion that the leaf is slowly morphing from a small leaf bud into a fully mature leaf.  This animation technique is based on a nineteenth century device called a [zoetrope](https://en.wikipedia.org/wiki/Zoetrope), which displays a sequence of gradually changing images, giving the illusion of motion (or, in this case, growing).
 
 The golden angle is related to some other mathematical concepts: the Fibonacci series and the golden ratio.  If you're interested in learning more about the relationship between math and the growth patterns of plants, I recommend checking out the incredible three part YouTube series: ["Doodling in Math: Spirals, Fibonacci, and Being a Plant"](https://www.youtube.com/watch?v=ahXIMUkSXX0) by Vi Hart.
 
