@@ -12,7 +12,7 @@ export const WelcomeModal = {
 					m('div', { id: 'welcome-video'},
 						m('div', { class: 'welcome-iframe-wrapper' },
 							m('div', { style: 'padding:100% 0 0 0;position:relative;'},
-								m('iframe', { src: 'https://player.vimeo.com/video/677916478?h=0574e5cbd6&loop=1&title=0&byline=0&portrait=0', style: 'position:absolute;top:0;left:0;width:100%;height:100%;', frameborder: '0', allow: 'autoplay; fullscreen; picture-in-picture', allowfullscreen: true }),
+								m('iframe', { src: 'https://player.vimeo.com/video/677916478?h=0574e5cbd6&loop=1&autoplay=1&title=0&byline=0&portrait=0', style: 'position:absolute;top:0;left:0;width:100%;height:100%;', frameborder: '0', allow: 'autoplay; fullscreen; picture-in-picture', allowfullscreen: true }),
 							),
 						),
 					),
