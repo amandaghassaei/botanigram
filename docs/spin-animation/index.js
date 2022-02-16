@@ -28,9 +28,11 @@ function getEasing(length) {
 	let sum = 0;
 	for (let i = 0; i < halfLength; i++) {
 		const x = i / length;
+		// Use function y = x^3.
 		const y = x * x * x;
 		easing[i] = y;
 		sum += y;
+		// Mirror function for second half of easing function.
 		if (i < halfLength - 1) {
 			easing[length - i - 1] = y;
 			sum += y;
@@ -49,6 +51,7 @@ function setup() {
 	img = loadImage(renderFullSize ? "Square_Crop.jpg" : "Square_Crop-900.jpg");
 	const canvas = document.getElementById('defaultCanvas0');
 
+	// Init capturer.
 	if (CanvasCapture) {
 		CanvasCapture.init(
 			canvas,
@@ -61,6 +64,7 @@ function setup() {
 }
 
 function draw() {
+	// Begin recording.
 	if (t == 0 && recordVideo && CanvasCapture) {
 		CanvasCapture.beginVideoRecord({
 			format: 'webm',
@@ -70,13 +74,15 @@ function draw() {
 		});
 	}
 
+	// Draw rotated image.
 	const center = cropDim / 2;
 	push();
 	translate(center, center);
-	rotate(angle * 2.4); // golden angle is 2.4 radians.
+	rotate(angle * 2.4); // Golden angle is 2.4 radians.
 	image(img, imageOffset - center, imageOffset - center);
 	pop();
 
+	// Record frame.
 	if (CanvasCapture && CanvasCapture.isRecording()) CanvasCapture.recordFrame();
 
 	if (easingIndex === 0 && easingNumSteps === targetEasingSteps) {
@@ -92,17 +98,20 @@ function draw() {
 		}
 	}
 
+	// Reset easing.
 	if (easingIndex === 0 && easingNumSteps > targetEasingSteps) {
 		easing = getEasing(easingNumSteps);
 		easingNumSteps = Math.floor(easingNumSteps * 0.75 / 2) * 2 + 1; // Make number odd.
 		if (easingNumSteps < targetEasingSteps) easingNumSteps = targetEasingSteps;
 	}
 
+	// Increment angle and easing.
 	angle += easing[easingIndex++];
 	if (easingIndex >= easingNumSteps) {
 		easingIndex = 0;
 	}
 
+	// End record if needed.
 	t++;
 	if (t > videoLength && recordVideo) {
 		if (CanvasCapture && CanvasCapture.isRecording()) CanvasCapture.stopRecord();
