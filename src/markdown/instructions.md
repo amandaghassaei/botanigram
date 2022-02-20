@@ -98,4 +98,4 @@ Other types of objects that exhibit spirals or Fibonacci patterns might be inter
 
 ### Feedback
 
-Send feedback/bugs to [botanigram@gmail.com](mailto:botanigram@gmail.com?subject=Feedback) or leave an issue on [Github](https://github.com/amandaghassaei/botanigram).
+Send feedback/bugs to [botanigram@gmail.com](mailto:botanigram@gmail.com?subject=Feedback) or leave a [discussion](https://github.com/amandaghassaei/botanigram/discussions) or [issue](https://github.com/amandaghassaei/botanigram/issues) on Github.

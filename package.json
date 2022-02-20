@@ -21,7 +21,7 @@
   "homepage": "https://github.com/amandaghassaei/botanigram#readme",
   "dependencies": {
     "auto-bind": "^5.0.1",
-    "canvas-capture": "^1.1.11",
+    "canvas-capture": "^1.2.0",
     "classnames": "^2.3.1",
     "country-region-data": "^2.0.0",
     "file-saver": "^2.0.5",
