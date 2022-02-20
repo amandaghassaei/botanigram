@@ -31,6 +31,19 @@ const POSITIONS = new Float32Array([
 	0.5, -0.5, 0,
 ]);
 
+type TouchType = {
+	startTime: number,
+	startX: number,
+	startY: number,
+	lastX: number,
+	lastY: number,
+	prevPositions: [number, number][],
+	centerX: number,
+	centerY: number,
+	isMultitouch: boolean,
+	cancelDrag: boolean,
+}
+
 export class ThreeView {
 	private _isPrimaryView = false;
 	private scene: Scene;
@@ -311,17 +324,23 @@ export class ThreeView {
 
 		const TAP_DURATION = 150;
 
-		let touches: {[key: string]: {
-			startTime: number,
-			startX: number,
-			startY: number,
-			lastX: number,
-			lastY: number,
-			centerX: number,
-			centerY: number,
-			isMultitouch: boolean,
-			cancelDrag: boolean,
-		}} = {};
+		function applyDelta(x: number, y: number, touch: TouchType) {
+			const diffX = x - touch.startX;
+			const diffY = y - touch.startY;
+			const size = new Vector2();
+			self.renderer!.getSize(size);
+			const viewerDim = size.x;
+			const imageDim = Math.max(state.imageHeight, state.imageWidth);
+			const zoom = self.camera.zoom;
+			const factor = 1 / viewerDim * imageDim / zoom;
+			// Convert to change in centerX, centerY.
+			const xPixel = Math.round(-diffX * factor + touch.centerX);
+			const yPixel = Math.round(diffY * factor + touch.centerY);
+			state.center = [xPixel, yPixel];
+			m.redraw();
+		}
+
+		let touches: { [key: string]: TouchType } = {};
 		this.renderer.domElement.addEventListener('pointerdown', (e: PointerEvent) => {
 			if (!state.paused) return; // Only enable when paused.
 			touches[e.pointerId] = {
@@ -330,6 +349,7 @@ export class ThreeView {
 				startY: e.y,
 				lastX: e.x,
 				lastY: e.y,
+				prevPositions: [[e.x, e.y]],
 				centerX: state.centerX,
 				centerY: state.centerY,
 				isMultitouch: false,
@@ -342,13 +362,18 @@ export class ThreeView {
 				});
 			}
 		});
+		// Handle center point drags.
 		this.renderer.domElement.addEventListener('pointermove', (e: PointerEvent) => {
 			if (!state.paused) return; // Only enable when paused.
 			const touch = touches[e.pointerId];
 			if (!touch) return;
-			const { lastX, lastY } = touch;
+			const { lastX, lastY, prevPositions } = touch;
 			touch.lastX = e.x;
 			touch.lastY = e.y;
+			prevPositions.push([e.x, e.y]);
+			if (prevPositions.length > 4) {
+				prevPositions.shift(); // Remove first element.
+			}
 			
 			// Check that this is not multitouch.
 			if (touch.isMultitouch) {
@@ -375,19 +400,7 @@ export class ThreeView {
 			}
 
 			// On long drags, apply an offset to the center position.
-			const diffX = e.x - touch.startX;
-			const diffY = e.y - touch.startY;
-			const size = new Vector2();
-			this.renderer!.getSize(size);
-			const viewerDim = size.x;
-			const imageDim = Math.max(state.imageHeight, state.imageWidth);
-			const zoom = this.camera.zoom;
-			const factor = 1 / viewerDim * imageDim / zoom;
-			// Convert to change in centerX, centerY.
-			const xPixel = Math.round(-diffX * factor + touch.centerX);
-			const yPixel = Math.round(diffY * factor + touch.centerY);
-			state.center = [xPixel, yPixel];
-			m.redraw();
+			applyDelta(e.x, e.y, touch);
 		});
 		this.renderer.domElement.addEventListener('pointercancel', (e: PointerEvent) => {
 			delete touches[e.pointerId];
@@ -395,6 +408,7 @@ export class ThreeView {
 		this.renderer.domElement.addEventListener('pointerout', (e: PointerEvent) => {
 			delete touches[e.pointerId];
 		});
+		// Handle center point clicks.
 		this.renderer.domElement.addEventListener('pointerup', (e: PointerEvent) => {
 			if (!state.paused) return; // Only enable when paused.
 			if (e.button !== 0) return; // Only handle left clicks.
@@ -407,9 +421,14 @@ export class ThreeView {
 				return;
 			}
 
-			// Don't use long presses.
+			// Don't use long presses as clicks.
 			const duration = performance.now() - touch.startTime;
 			if (duration > TAP_DURATION) {
+				// Adjust position if needed.
+				const { prevPositions, cancelDrag } = touch;
+				if (cancelDrag) return;
+				// At the end of touch events the user might trigger an accidental movement when lifting finger.
+				applyDelta(prevPositions[0][0], prevPositions[0][1], touch);
 				return;
 			}
 
