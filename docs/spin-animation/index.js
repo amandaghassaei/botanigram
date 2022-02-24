@@ -1,4 +1,4 @@
-const filename = "Square_Crop-900.jpg";
+const filename = "Square_Crop.jpg";
 let img, imageOffset, cropDim;
 
 let easingNumSteps = 101;
