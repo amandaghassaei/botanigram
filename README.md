@@ -134,3 +134,8 @@ Other types of objects that exhibit spirals or Fibonacci patterns might be inter
 ### Feedback
 
 Send feedback/bugs to [botanigram@gmail.com](mailto:botanigram@gmail.com?subject=Feedback) or leave a [discussion](https://github.com/amandaghassaei/botanigram/discussions) or [issue](https://github.com/amandaghassaei/botanigram/issues) on Github.
+
+
+### Additional Info
+
+[Ramping animation]((htpps://apps.amandaghassaei.com/botanigram/docs/spin-animation/)) made with p5.js, src at: [docs/spin-animation](docs/spin-animation)
