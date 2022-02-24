@@ -12,7 +12,7 @@ As you start exploring, you'll notice that some plants grow with pairs of leaves
 
 ### Photography Tips
 
-No special photography equipment required!  Center the camera over your subject and take a single overhead shot.  The best photographs are evenly lit, ideally with diffuse, indirect lighting.  If you are photographing in direct sunlight, try to cast a shadow over your subject to improve the quality of your animations.
+No special photography equipment required!  [Center the camera over your subject](https://twitter.com/amandaghassaei/status/1495521959236435968) and take a single overhead shot.  The best photographs are evenly lit, ideally with diffuse, indirect lighting.  If you are photographing in direct sunlight, try to cast a shadow over your subject to improve the quality of your animations.
 
 
 ### Import Your Photo
@@ -79,7 +79,7 @@ You can export your animation as a GIF, MP4 video, or still PNG frames.  Once yo
 
 Some easier examples that I'm hoping to feature more of, please [submit images](#modal-gallery) if you have them:
 
-- Cabbage slices: sliced cabbage (especially red cabbage) works great in the app.  Some (unsliced) ornamental cabbages also produce great results.
+- Cabbage slices: sliced cabbage (especially red cabbage) [works great in the app](https://twitter.com/amandaghassaei/status/1496507339641397256).  Some (unsliced) ornamental cabbages also produce great results.
 - Astrophytum asterias (e.g. sea urchin cactus, sand dollar cactus): the little tufts and patterns on these cacti [make great animations](https://twitter.com/amandaghassaei/status/1494313936988082179)!
 - Succulents: many shapes and sizes of succulents work great, bonus points if you can provide the species name when you submit.
 - Cacti: if the cactus has lobes/arms, count those first to see if you're dealing with a 3, 5, 8, or 13-lobed Fibonacci cactus, those should work most of the time.
@@ -93,7 +93,7 @@ Here are ideas for challenging examples I'm hoping to include in this app:
 - Dahlia/sunflower/daisy: must be very symmetric to work.
 - Fennel flowers (or some other branched flower like Queen Anne's lace).
 
-Other types of objects that exhibit spirals or Fibonacci patterns might be interesting to try (e.g. shells, peacock tail "eyes") – experiment with using different rotation angles as the golden angle may not apply.
+Drawings/paintings/[tattoos](https://twitter.com/amandaghassaei/status/1494710180457549827) will all work as well, feel free to submit unconventional examples.  Other types of objects that exhibit spirals or Fibonacci patterns might be interesting to try (e.g. shells, peacock tail "eyes") – experiment with using different rotation angles as the golden angle may not apply.
 
 
 ### Feedback
