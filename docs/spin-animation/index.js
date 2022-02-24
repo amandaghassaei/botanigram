@@ -1,3 +1,5 @@
+// Live demo at: https://apps.amandaghassaei.com/botanigram/docs/spin-animation/
+
 const filename = "Square_Crop.jpg";
 let img, imageOffset, cropDim;
 
