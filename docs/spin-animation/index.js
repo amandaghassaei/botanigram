@@ -1,9 +1,5 @@
-
-const renderFullSize = false;
-let img;
-const imgDim = renderFullSize ? 2572 : 900;
-const cropDim = Math.floor(imgDim / Math.sqrt(2));
-const imageOffset = -(imgDim - cropDim) / 2;
+const filename = "Square_Crop-900.jpg";
+let img, imageOffset, cropDim;
 
 let easingNumSteps = 101;
 let easingIndex = 0;
@@ -13,12 +9,12 @@ let angle = 0;
 const targetEasingSteps = 5; // 30 / 5 is 6fps.
 
 const recordVideo = false;
-const videoLength = 20 * 30; // 20 seconds times 30fps.
+const videoLength = 30 * 30; // 30 seconds times 30fps.
 let t = 0;
 
 const CanvasCapture = window.CanvasCapture;
 
-// Init a symmetic easing function that has area under the curve = 1.
+// Init a symmetric easing function that has area under the curve = 1.
 function getEasing(length) {
 	if (length % 2 !== 1) {
 		throw new Error(`Length must be odd, got ${length}.`);
@@ -45,10 +41,19 @@ function getEasing(length) {
 	return easing;
 }
 
+function preload() {
+	img = loadImage(filename);
+	
+}
+
 function setup() {
+	const imgDim = Math.min(img.width, img.height);
+	cropDim = Math.floor(imgDim / Math.sqrt(2));
+	imageOffset = -(imgDim - cropDim) / 2;
+
 	pixelDensity(1);
 	createCanvas(cropDim, cropDim);
-	img = loadImage(renderFullSize ? "Square_Crop.jpg" : "Square_Crop-900.jpg");
+
 	const canvas = document.getElementById('defaultCanvas0');
 
 	// Init capturer.
@@ -57,7 +62,7 @@ function setup() {
 			canvas,
 			{
 				showRecDot: true,
-				ffmpegCorePath: '../../dependencies/ffmpeg-core.js'
+				ffmpegCorePath: '../../dependencies/ffmpeg-core.js',
 			},
 		);
 	}
@@ -67,7 +72,7 @@ function draw() {
 	// Begin recording.
 	if (t == 0 && recordVideo && CanvasCapture) {
 		CanvasCapture.beginVideoRecord({
-			format: 'webm',
+			format: CanvasCapture.WEBM, // Also try CanvasCapture.MP4 (must have '../../dependencies/ffmpeg-core.js' available).
 			name: 'Animation',
 			quality: 1,
 			fps: 30,
