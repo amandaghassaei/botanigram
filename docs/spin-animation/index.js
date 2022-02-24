@@ -5,6 +5,7 @@ let easingNumSteps = 101;
 let easingIndex = 0;
 let easing;
 let angle = 0;
+let reverseSpin = false; // False is CCW, true if CW.
 
 const targetEasingSteps = 5; // 30 / 5 is 6fps.
 
@@ -72,7 +73,7 @@ function draw() {
 	// Begin recording.
 	if (t == 0 && recordVideo && CanvasCapture) {
 		CanvasCapture.beginVideoRecord({
-			format: CanvasCapture.WEBM, // Also try CanvasCapture.MP4 (must have '../../dependencies/ffmpeg-core.js' available).
+			format: CanvasCapture.WEBM, // Also try CanvasCapture.MP4.
 			name: 'Animation',
 			quality: 1,
 			fps: 30,
@@ -83,7 +84,7 @@ function draw() {
 	const center = cropDim / 2;
 	push();
 	translate(center, center);
-	rotate(angle * 2.4); // Golden angle is 2.4 radians.
+	rotate((reverseSpin ? 1 : -1) * angle * 2.4); // Golden angle is 2.4 radians.
 	image(img, imageOffset - center, imageOffset - center);
 	pop();
 
