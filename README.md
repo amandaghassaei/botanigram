@@ -138,4 +138,4 @@ Send feedback/bugs to [botanigram@gmail.com](mailto:botanigram@gmail.com?subject
 
 ### Additional Info
 
-[Ramping animation]((htpps://apps.amandaghassaei.com/botanigram/docs/spin-animation/)) made with p5.js, src at: [docs/spin-animation](docs/spin-animation)
+[Ramping animation](https://apps.amandaghassaei.com/botanigram/docs/spin-animation/) made with p5.js, src at: [docs/spin-animation](docs/spin-animation)
