@@ -1,17 +1,20 @@
 // Live demo at: https://apps.amandaghassaei.com/botanigram/docs/spin-animation/
 
 const filename = "Square_Crop.jpg";
+
+const reverseSpin = true; // False is CCW, true is CW.
+const recordVideo = false;
+const rotationAngle = 2.4; // In radians (golden angle is 2.4 rad).
+
 let img, imageOffset, cropDim;
 
-let easingNumSteps = 101;
+let easingNumSteps = 101;// Should be odd number.
 let easingIndex = 0;
 let easing;
 let angle = 0;
-let reverseSpin = false; // False is CCW, true if CW.
 
-const targetEasingSteps = 5; // 30 / 5 is 6fps.
+const targetEasingSteps = 5; // 30fps / 5 is 6fps.
 
-const recordVideo = false;
 const videoLength = 30 * 30; // 30 seconds times 30fps.
 let t = 0;
 
@@ -54,6 +57,8 @@ function setup() {
 	cropDim = Math.floor(imgDim / Math.sqrt(2));
 	imageOffset = -(imgDim - cropDim) / 2;
 
+	frameRate(30);// 30 fps.
+
 	pixelDensity(1);
 	createCanvas(cropDim, cropDim);
 
@@ -65,7 +70,8 @@ function setup() {
 			canvas,
 			{
 				showRecDot: true,
-				ffmpegCorePath: '../../dependencies/ffmpeg-core.js',
+				showDialogs: true,
+				ffmpegCorePath: 'https://raw.githubusercontent.com/amandaghassaei/botanigram/main/dependencies/ffmpeg-core.js',
 			},
 		);
 	}
@@ -75,10 +81,11 @@ function draw() {
 	// Begin recording.
 	if (t == 0 && recordVideo && CanvasCapture) {
 		CanvasCapture.beginVideoRecord({
-			format: CanvasCapture.WEBM, // Also try CanvasCapture.MP4.
+			format: CanvasCapture.MP4, // If you are having trouble exporting MP4 try CanvasCapture.WEBM
 			name: 'Animation',
 			quality: 1,
 			fps: 30,
+			onExportProgress: (progress) => console.log(`Processing MP4: ${(progress * 100).toFixed(1)}% complete`),
 		});
 	}
 
@@ -86,7 +93,7 @@ function draw() {
 	const center = cropDim / 2;
 	push();
 	translate(center, center);
-	rotate((reverseSpin ? 1 : -1) * angle * 2.4); // Golden angle is 2.4 radians.
+	rotate((reverseSpin ? 1 : -1) * angle * rotationAngle);
 	image(img, imageOffset - center, imageOffset - center);
 	pop();
 

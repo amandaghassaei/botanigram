@@ -3,11 +3,16 @@
 		<meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
 		<meta charset="utf-8">
 		<title>Spin Animation</title>
+
+		<!-- Set the correct server headers for gh-pages to support SharedArrayBuffer -->
+		<!-- https://github.com/gzuidhof/coi-serviceworker -->
+		<!-- Do this first bc it requires a page reload -->
+		<script src="coi-serviceworker.min.js"></script>
 	</head>
 	<body>
 
 	</body>
 	<script src="p5.min.js"></script>
-	<script src="../../node_modules/canvas-capture/dist/canvas-capture.min.js"></script>
+	<script src="canvas-capture.min.js"></script>
 	<script src="index.js"></script>
 </html>
