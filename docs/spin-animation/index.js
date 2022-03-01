@@ -1,4 +1,5 @@
 // Live demo at: https://apps.amandaghassaei.com/botanigram/docs/spin-animation/
+// Find instructions at https://github.com/amandaghassaei/botanigram/blob/main/docs/spin-animation/README.md
 
 const filename = "Square_Crop.jpg";
 
