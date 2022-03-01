@@ -9,7 +9,7 @@ Live demo at: [apps.amandaghassaei.com/botanigram/docs/spin-animation/](https://
 
 Download the repository from [Github](https://github.com/amandaghassaei/botanigram).
 
-Create an image with a square crop so that the center point of the image is the center of rotation.  You can do this in [the app](https://apps.amandaghassaei.com/botanigram/) by uploading your image, selecting the center, then hitting the `p` key.
+Create an image with a square crop so that the center point of the image is the center of rotation.  You can do this in [the app](https://apps.amandaghassaei.com/botanigram/) by uploading your image, selecting the center, then hitting the `p` key.  (Note: this will save a high resolution square image, which may run slowly and produce a massive video file, resize the image as needed).
 
 Copy the image to the `docs/spin-animation` folder in the repo and edit the line in `index.js` to point to your file:
 
